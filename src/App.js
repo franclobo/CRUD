@@ -1,19 +1,37 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import 'App.css';
+import AddTutorial from './components/AddTutorials';
+import Tutorial from './components/Tutorial';
+import TutorialList from './components/TutorialList';
 
 function App() {
   return (
     <Router>
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link to="/" className="navbar-brand">Home</Link>
-          <Link to="/about" className="navbar-brand">About</Link>
-          <Link to="/contact" className="navbar-brand">Contact</Link>
-        </nav>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
+      <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <a hsref="/tutorials" className="navbar-brand">
+          bezKoder
+        </a>
+        <div className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <Link to={"/tutotrials"} className="nav-link">
+              Tutorials
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/add"} className="nav-link">
+              Add
+            </Link>
+          </li>
+        </div>
+      </nav>
+      <div className="container mt-3">
+        <Swith>
+          <Route exact path={["/","/tutorials"]} component={TutorialList} />
+          <Route path="/add" component={AddTutorial} />
+          <Route path="/tutorials/:id" component={Tutorial} />
+        </Swith>
       </div>
     </Router>
   );
