@@ -1,5 +1,5 @@
 import {
-  CREATE_TURORIAL,
+  CREATE_TUTORIAL,
   RETRIEVE_TUTORIALS,
   UPDATE_TUTORIAL,
   DELETE_TUTORIAL,
@@ -10,7 +10,7 @@ const initialState = [];
 function tutorialsReducer(tutorials = initialState, action) {
   const { type, payload } = action;
   switch (type) {
-    case CREATE_TURORIAL:
+    case CREATE_TUTORIAL:
       return [...tutorials, payload];
     case RETRIEVE_TUTORIALS:
       return payload;

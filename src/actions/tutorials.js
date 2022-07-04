@@ -1,5 +1,5 @@
 import {
-  CREATE_TURORIAL,
+  CREATE_TUTORIAL,
   RETRIEVE_TUTORIALS,
   UPDATE_TUTORIAL,
   DELETE_TUTORIAL,
@@ -11,7 +11,7 @@ export const createTutorial = (title, description) => async (dispatch) => {
   try {
     const res = await TutorialDataService.create({ title, description });
     dispatch({
-      type: CREATE_TURORIAL,
+      type: CREATE_TUTORIAL,
       payload: res.data,
     });
     return Promise.resolve(res.data);

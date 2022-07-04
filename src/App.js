@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import 'App.css';
-import AddTutorial from './components/AddTutorials';
+import './App.css';
+import AddTutorial from './components/AddTutorial';
 import Tutorial from './components/Tutorial';
 import TutorialList from './components/TutorialList';
 
@@ -27,11 +27,11 @@ function App() {
         </div>
       </nav>
       <div className="container mt-3">
-        <Swith>
+        <swith>
           <Route exact path={["/","/tutorials"]} component={TutorialList} />
           <Route path="/add" component={AddTutorial} />
           <Route path="/tutorials/:id" component={Tutorial} />
-        </Swith>
+        </swith>
       </div>
     </Router>
   );
