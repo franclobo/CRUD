@@ -59,7 +59,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse curriculum.
-- My code reviewers.
 
 ## 📝 License
 
