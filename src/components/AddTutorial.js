@@ -16,10 +16,10 @@ const AddTutorial = () => {
     const { name, value } = event.target;
     setTutorial({ ...tutorial, [name]: value });
   };
-  const saveTutorial = (event) => {
+  const saveTutorial = () => {
     const { title, description } = tutorial;
     dispatch(createTutorial(title, description))
-      .then(() => {
+      .then((data) => {
         setTutorial({
           id: data.id,
           title: data.title,
