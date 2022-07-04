@@ -21,7 +21,7 @@ const removeAll = () => {
 const findByTitle = (title) => {
   return http.get(`/tutorials?title=${title}`);
 };
-const TutorialService = {
+const TutorialDataService = {
   getAll,
   get,
   create,
@@ -31,4 +31,4 @@ const TutorialService = {
   findByTitle,
 };
 
-export default TutorialService;
+export default TutorialDataService;
